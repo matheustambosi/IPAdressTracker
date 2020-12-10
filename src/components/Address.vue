@@ -1,28 +1,37 @@
 <template>
-  <v-card class="mx-auto" max-width="344" outlined>
-    <v-list-item three-line>
-      <v-list-item-content>
-        <div class="overline mb-4">IP ADDRESS</div>
-        <v-list-item-title class="headline mb-1">
-          Headline 5
-        </v-list-item-title>
-        <v-list-item-subtitle
-          >Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle
-        >
-      </v-list-item-content>
-
-      <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
-    </v-list-item>
-
-    <v-card-actions>
-      <v-btn outlined rounded text> Button </v-btn>
-    </v-card-actions>
-  </v-card>
+  <v-row class="mt-n12 justify-center mx-auto">
+    <v-col cols="11" :md="12" class="d-flex justify-center align-center mt-5">
+      <app-addressitem :items="items" />
+    </v-col>
+  </v-row>
 </template>
-
 <script>
-export default {
+  export default {
   name: "app-address",
-  data: () => ({}),
-};
+    data: () => ({
+      money: Math.round(Math.random()) * 2 - 1,
+      items: []
+    }),
+    components: {
+      'app-addressitem': () => import('./AddressItem')
+    },
+    computed: {
+      moneyStatus: function() {
+        return this.money < 0 ? 'red--text lighten-3' : 'green--text lighten-3'
+      }
+    },
+    beforeMount() {
+      const items = [{ text: 'IP Address', value: '192.212.174.101' },
+                     { text: 'Location', value: 'Brooklyn, NY 10001' },
+                     { text: 'Timezone', value: 'Eastern Daylight Time' },
+                     { text: 'ISP', value: 'SpaceX Starlink' }]
+      this.items = items
+    }
+  }
 </script>
+
+<style>
+  .border-2 {
+    border: 2px solid;
+  }
+</style>

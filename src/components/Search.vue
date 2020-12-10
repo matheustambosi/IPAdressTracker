@@ -1,21 +1,16 @@
 <template>
-  <v-main>
-    <v-col cols="12" sm="6" md="4">
-      <v-text-field
-        placeholder="Search for a IP"
-        filled
-        solo
-        rounded
-        append-icon="mdi-chevron-right"
-      ></v-text-field>
-    </v-col>
-  </v-main>
+  <v-text-field
+    class="col-10 col-md-6"
+    placeholder="Search for a IP"
+    solo
+    rounded
+    append-icon="mdi-chevron-right"
+  ></v-text-field>
 </template>
 
 <script>
 export default {
-  name: "app-search",
-
-  data: () => ({}),
+  name: 'app-search',
+  data: () => ({})
 };
 </script>
