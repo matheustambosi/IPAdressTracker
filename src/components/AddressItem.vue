@@ -1,11 +1,13 @@
 <template>
-  <v-card class="d-flex col-sm-12 col-md-8 rounded-xl" elevation="15">
-    <div class="d-flex col-3" v-for="(item, i) in items" :key="i">
-      <div class="d-flex flex-column">
+  <v-card class="d-flex flex-column flex-md-row col-sm-10 col-md-8 rounded-xl" elevation="15">
+    <div class="d-flex justify-center align-center align-sm-start col-md-3" v-for="(item, i) in items" :key="i">
+      <div class="d-flex flex-column align-center align-sm-start">
         <span class="result-title">{{ item.text }}</span>
         <span class="result-value">{{ item.value }}</span>
       </div>
-      <v-divider v-if="showDivider(i)" vertical class="mx-4 border-2 rounded"></v-divider>
+      <div class="d-none d-md-flex">
+        <v-divider v-if="showDivider(i)" vertical class="border-2 rounded"></v-divider>
+      </div>
     </div>
   </v-card>
 </template>

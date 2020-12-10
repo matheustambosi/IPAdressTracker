@@ -6,8 +6,16 @@
     max-height="200"
     src="../../public/assets/images/pattern-bg.png">
   </v-img>
-  <app-title></app-title>
-  <app-search></app-search>
+  <v-row>
+    <v-col cols="12" class="text-center">
+      <app-title></app-title>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="12" class="d-flex justify-center">
+      <app-search></app-search>
+    </v-col>
+  </v-row>
 </div>
 </template>
 
@@ -17,8 +25,7 @@ export default {
   components: {
     'app-search': () => import('./Search'),
     'app-title': () => import('./Title')
-  },
-  data: () => ({}),
+  }
 };
 </script>
 

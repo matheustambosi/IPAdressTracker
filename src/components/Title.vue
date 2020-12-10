@@ -1,9 +1,5 @@
 <template>
-  <v-row>
-    <v-col cols="12" class="text-center">
-      <h1 class="header-title">IP Adress Tracker</h1>
-    </v-col>
-  </v-row>
+  <h1 class="header-title">IP Adress Tracker</h1>
 </template>
 
 <script>

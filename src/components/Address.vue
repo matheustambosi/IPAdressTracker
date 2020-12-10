@@ -1,6 +1,6 @@
 <template>
-  <v-row class="mt-n12 mx-auto">
-    <v-col :md="12" class="d-flex justify-center align-center mt-5">
+  <v-row class="mt-n12 justify-center mx-auto">
+    <v-col cols="11" :md="12" class="d-flex justify-center align-center mt-5">
       <app-addressitem :items="items" />
     </v-col>
   </v-row>
@@ -21,12 +21,11 @@
       }
     },
     beforeMount() {
-      const th = this
       const items = [{ text: 'IP Address', value: '192.212.174.101' },
                      { text: 'Location', value: 'Brooklyn, NY 10001' },
                      { text: 'Timezone', value: 'Eastern Daylight Time' },
                      { text: 'ISP', value: 'SpaceX Starlink' }]
-      th.items = items
+      this.items = items
     }
   }
 </script>
