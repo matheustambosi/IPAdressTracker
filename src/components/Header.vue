@@ -2,8 +2,8 @@
 <div>
   <v-img
     class="background-img"
-    min-height="150"
-    max-height="200"
+    min-height="280"
+    max-height="300"
     src="../../public/assets/images/pattern-bg.png">
   </v-img>
   <v-row>
