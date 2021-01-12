@@ -1,5 +1,5 @@
 <template>
-  <h1 class="header-title">IP Adress Tracker</h1>
+  <h1 class="header-title">IP Address Tracker</h1>
 </template>
 
 <script>
